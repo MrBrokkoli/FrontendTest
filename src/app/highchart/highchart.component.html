@@ -1,40 +1,38 @@
 <div class="highchart">
-    <div class="highchart_datepicker">
-        <mat-form-field appearance="fill">
-            <mat-label>Date range</mat-label>
-            <mat-date-range-input [rangePicker]="picker">
-              <input matStartDate placeholder="Start date" [(ngModel)]="startDate" (dateChange)="dateChanged()" required>
-              <input matEndDate placeholder="End date" [(ngModel)]="endDate" (dateChange)="dateChanged()" required>
-            </mat-date-range-input>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
-          </mat-form-field>
-    </div>
-    <div class="highchart_options">
-        <mat-form-field>
-            <mat-label>Type of the chart</mat-label>
-            <mat-select [(value)]="selectedType">
-                <mat-option *ngFor="let type of types" [value]="type" (click)="typeChanged()">{{ chartTypeEnumToLabelMapping[type] }}</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Color</mat-label>
-            <mat-select [(value)]="selectedColor" [disabled]="visibleSeriesCount > 1">
-                <mat-option *ngFor="let color of colors" [value]="color" (click)="colorChanged()">{{ chartColorEnumToLabelMapping[color] }}</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Sensor</mat-label>
-            <mat-select [(value)]="selectedSensor">
-                <mat-option *ngFor="let sensor of sensors" [value]="sensor" (click)="sensorChanged()">{{ chartSensorEnumToLabelMapping[sensor] }}</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <highcharts-chart
-        *ngIf="chartOptions"
-        [Highcharts]="Highcharts"
-        [options]="chartOptions"
-        [(update)]="needUpdate"
-        style="height: 400px; display: block;"
-    ></highcharts-chart>
+  <div class="highchart_datepicker">
+    <mat-form-field appearance="fill">
+      <mat-label>Date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" [(ngModel)]="startDate" (dateChange)="dateChanged()" required>
+        <input matEndDate placeholder="End date" [(ngModel)]="endDate" (dateChange)="dateChanged()" required>
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+  </div>
+  <div class="highchart_options">
+    <mat-form-field>
+      <mat-label>Type of the chart</mat-label>
+      <mat-select [(value)]="selectedType">
+        <mat-option *ngFor="let type of types" [value]="type" (click)="typeChanged()">{{
+          chartTypeEnumToLabelMapping[type] }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Color</mat-label>
+      <mat-select [(value)]="selectedColor" [disabled]="visibleSeriesCount > 1">
+        <mat-option *ngFor="let color of colors" [value]="color" (click)="colorChanged()">{{
+          chartColorEnumToLabelMapping[color] }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Sensor</mat-label>
+      <mat-select [(value)]="selectedSensor">
+        <mat-option *ngFor="let sensor of sensors" [value]="sensor" (click)="sensorChanged()">{{
+          chartSensorEnumToLabelMapping[sensor] }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <highcharts-chart *ngIf="chartOptions" [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="needUpdate"
+    style="height: 400px; display: block;"></highcharts-chart>
 </div>

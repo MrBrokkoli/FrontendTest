@@ -1,13 +1,13 @@
 .home_content {
-    display: flex;
+  display: flex;
 
-    /*this centers the text horizontally*/
-    justify-content: center;
-  
-    /*this centers the text vertically*/
-    align-items: center;
-    height: calc(100vh - 48px);
-    width: 100vw;
-    color: black;
-    font-size: 2rem;
+  /*this centers the text horizontally*/
+  justify-content: center;
+
+  /*this centers the text vertically*/
+  align-items: center;
+  height: calc(100vh - 48px);
+  width: 100vw;
+  color: black;
+  font-size: 2rem;
 }

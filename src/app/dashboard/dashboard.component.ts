@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
   public startDate: string = "";
   public endDate: string = "";
   public numberOfHighcharts = 1;

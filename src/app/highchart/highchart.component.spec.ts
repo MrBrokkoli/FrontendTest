@@ -3,14 +3,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HighchartComponent } from './highchart.component';
 
 describe('HighchartComponent', () => {
-    let component: HighchartComponent;
-    let fixture: ComponentFixture<HighchartComponent>;
+  let component: HighchartComponent;
+  let fixture: ComponentFixture<HighchartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HighchartComponent ]
+      declarations: [HighchartComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HighchartComponent);
     component = fixture.componentInstance;
