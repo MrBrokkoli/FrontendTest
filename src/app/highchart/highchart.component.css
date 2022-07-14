@@ -1,0 +1,18 @@
+.highchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(3, 62, 107, 0.2);
+    margin: 1rem;
+    box-shadow: 2px 2px 0px 0px rgba(3, 62, 107, .1);
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background: none;
+}
+
+.highchart_options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}

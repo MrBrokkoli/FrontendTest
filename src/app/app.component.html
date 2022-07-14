@@ -1,0 +1,11 @@
+<div class="content">
+  <nav class="nav">
+    <ul class="nav_list">
+      <li><a class="nav_item" routerLink="/home" [routerLinkActive]="['active']" ariaCurrentWhenActive="page">Home</a></li>
+      <li><a class="nav_item" routerLink="/dashboard" [routerLinkActive]="['active']" ariaCurrentWhenActive="page">Dashboard</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

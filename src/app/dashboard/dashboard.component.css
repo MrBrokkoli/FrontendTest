@@ -1,0 +1,34 @@
+.dashboard_highcharts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard_slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.dashboard_caption {
+    margin-right: 16px;
+    font-size: 1.25rem;
+}
+
+::ng-deep .mat-slider-thumb {
+    background-color: rgb(3, 62, 107) !important;
+    transform: scale(0) !important;
+}
+
+::ng-deep .mat-slider-thumb-label {
+    background-color: rgb(3, 62, 107)  !important;
+    transform: rotate(45deg) !important;
+    border-radius: 50% 50% 0 !important;
+}
+
+::ng-deep .mat-slider.mat-accent .mat-slider-track-fill, .mat-slider.mat-accent .mat-slider-thumb, .mat-slider.mat-accent .mat-slider-thumb-label {
+    background-color: rgb(3, 62, 107)  !important;
+}
+
+::ng-deep .mat-slider-thumb-label-text {
+    opacity: 1 !important;
+}
